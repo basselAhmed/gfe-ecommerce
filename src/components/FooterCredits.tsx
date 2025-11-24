@@ -5,7 +5,10 @@ export default function FooterCredits() {
   const isHome = location.pathname === '/'
 
   return (
-    <footer className="mt-auto py-8 border-t border-gray-200 bg-white/50 backdrop-blur-sm">
+    <footer
+      data-gfe-screenshot-exclude="true"
+      className="mt-auto py-8 border-t border-gray-200 bg-white/50 backdrop-blur-sm"
+    >
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
         <div className="flex items-center gap-6">
           {!isHome && (
@@ -30,7 +33,7 @@ export default function FooterCredits() {
           )}
         </div>
 
-        <div className="flex items-center gap-1">
+        <div className="flex items-center flex-wrap gap-1">
           <span>A challenge by</span>
           <a
             href="https://www.greatfrontend.com/projects?ref=challenges"
