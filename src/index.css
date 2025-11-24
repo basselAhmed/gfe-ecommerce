@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+
+@theme {
+  --breakpoint-md: 769px;
+  --font-sans: 'Noto Sans', sans-serif;
+  --shadow-focus-ring: 0px 0px 0px 4px
+    var(--tw-shadow-color, rgb(68 76 231 / 0.12));
+}
