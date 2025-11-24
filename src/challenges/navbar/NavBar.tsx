@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Button from '../../components/Button'
 import CartButton from './CartButton'
+import { RiMenuFill, RiCloseLine } from 'react-icons/ri'
 
 const MENU_ITEMS = [
   { label: 'Shop all', href: '#' },
@@ -76,7 +77,7 @@ export default function NavBar() {
       >
         Skip to main content
       </a>
-      <div className="flex items-center justify-between py-3 gap-[103px] h-[68px]">
+      <div className="flex items-center justify-between py-3 gap-[103px] h-[68px] md:h-14">
         <div className="flex items-center gap-[103px]">
           <Button href="/" aria-label="Home">
             <img
@@ -101,24 +102,13 @@ export default function NavBar() {
           {/* Hamburger Button */}
           <button
             ref={openButtonRef}
-            className="md:hidden p-2 text-neutral-600 hover:text-neutral-900 focus:outline-none focus:ring-4 focus:ring-indigo-500/12 rounded"
+            className="md:hidden size-5 text-neutral-600 hover:text-neutral-900 focus:outline-none focus:ring-4 focus:ring-indigo-500/12 rounded"
             onClick={() => setIsOpen(true)}
             aria-label="Open menu"
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
           >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2.5 3.33333H17.5V5H2.5V3.33333ZM2.5 9.16667H17.5V10.8333H2.5V9.16667ZM2.5 15H17.5V16.6667H2.5V15Z"
-                fill="currentColor"
-              />
-            </svg>
+            <RiMenuFill className="w-full h-full" />
           </button>
         </div>
       </div>
@@ -147,24 +137,11 @@ export default function NavBar() {
           <div className="flex items-center justify-between">
             <img src="/img/stylenest.svg" alt="Stylenest logo" />
             <button
-              className="p-2 text-neutral-600 hover:text-neutral-900 focus:outline-none focus:ring-4 focus:ring-indigo-500/12 rounded"
+              className="size-5 text-neutral-600 hover:text-neutral-900 focus:outline-none focus:ring-4 focus:ring-indigo-500/12 rounded"
               onClick={() => setIsOpen(false)}
               aria-label="Close menu"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <RiCloseLine className="w-full h-full" />
             </button>
           </div>
 
