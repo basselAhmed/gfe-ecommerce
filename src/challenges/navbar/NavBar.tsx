@@ -84,7 +84,7 @@ export default function NavBar() {
               src="/img/stylenest.svg"
               alt="Stylenest logo"
               className="z-50 relative"
-              width="120"
+              width="105"
               height="32"
             />
           </Button>
@@ -135,7 +135,12 @@ export default function NavBar() {
       >
         <div className="container mx-auto px-4 pt-8 pb-4">
           <div className="flex items-center justify-between">
-            <img src="/img/stylenest.svg" alt="Stylenest logo" />
+            <img
+              src="/img/stylenest.svg"
+              width={105}
+              height={32}
+              alt="Stylenest logo"
+            />
             <button
               className="size-5 text-neutral-600 hover:text-neutral-900 focus:outline-none focus:ring-4 focus:ring-indigo-500/12 rounded"
               onClick={() => setIsOpen(false)}
